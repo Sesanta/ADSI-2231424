@@ -4,270 +4,285 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge Sprite</title>
+    <title>Challenge Sprites</title>
     <style>
-        body {
-            background-color: rgb(22, 160,84);
-            font-family: Arial;
-            margin: 0px auto;
-        }
-        div.sprite1 {
-            border: 2px solid rgb(22, 160,84);
-            background-image: url(imgs/spriteweb.png);     
-            background-position: -10px 202px;
-            height: 190px;
-            width: 192px;
-            margin: 0px auto;
-        }
-        menu { margin: 0px auto; }
-        menu ul li {
-            display: inline-block;
-            vertical-align: top;
-            padding: 10px;
-        }
-        menu ul li a:link,
-        menu ul li a:visited {
-            background-color: rgb(6, 73, 36);
-            border-bottom: 10px solid #fff;
-            color: #ffffff;
-            padding: 20px 68px;
-            text-decoration: none;
-        }
-        menu ul li a:hover {
-            border-bottom: 10px solid rgb(214, 250, 8);
-            background-color: #000;
-        }
-        div.sprite2 {
-            background-color: rgb(6, 73, 36);
-            margin: 0px 68px;
-            width: 1047px;
-            height: 246px;        
-        }
-        div.sprite2 ul.sprite3 {
-            border: 2px solid #ffffff;
-            background-image: url(imgs/spriteweb.png);
-            background-position: 329px 594px;           
-            margin: 20px 19px;
-            width: 263px;
-            height: 202px;
-        }
-        div.sprite2 ul.sprite4 {
-            border: 2px solid #ffffff;
-            background-image: url(imgs/spriteweb.png);
-            background-position: 329px 594px;           
-            margin: -2px 278px;
-            width: 263px;
-            height: 202px;
-        }
-        div.sprite2 ul.sprite5 {
-            border: 2px solid #ffffff;
-            background-image: url(imgs/spriteweb.png);
-            background-position: 329px 594px;           
-            margin: -3px 279px;
-            width: 263px;
-            height: 202px;
-        }
-        div.sprite6 {
-            background-color: rgb(6, 73, 36);
-            border: 2px solid #ffffff;
-            margin: 65px -300px;
-            width: 1047px;
-            height: 825px;
-        }
-        div.sprite7 {
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            margin: 19px 19px;
-            width: 1003px;
-            height: 246px;
-        }
-        div.sprite2 ul.sprite8 {
-            border: 2px solid #fffffff5;
-            background-image: url(imgs/spriteweb.png);
-            background-position: -290px 105px;           
-            margin: 71px 15px;
-            width: 50px;
-            height: 100px;
-        }
-        main {
-            margin: -248px 160px;
-            width: 555px;   
-        }
-        main article {
-            background-color: #ffffff;
-            border: 1px solid #ffffff;
-            display: inline-block;
-            vertical-align: top;
-            padding: 5px;
-            width: 700px;
-            height: 237px;
-        }
-        main article.ls p { word-spacing: 1px; }
-        div.sprite2 ul.sprite9 {
-            border: 2px solid #fffffff5;
-            background-image: url(imgs/spriteweb.png);
-            background-position: -84px 385px;           
-            margin: -220px 730px;
-            width: 52px;
-            height: 155px;
-        }
-        div.sprite10 {
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            margin: 238px -954px;
-            width: 1003px;
-            height: 246px;    
-        }
-        div.sprite2 ul.sprite11 {
-            border: 2px solid #fffffff5;
-            background-image: url(imgs/spriteweb.png);
-            background-position: -290px 105px;           
-            margin: 71px 20px;
-            width: 50px;
-            height: 100px;
-        }
-        main {
-            margin: -248px 160px;
-            width: 555px;           
-        }
-        main article {
-            background-color: #ffffff;
-            border: 1px solid #ffffff;
-            display: inline-block;
-            vertical-align: top;
-            padding: 5px;
-            width: 700px;
-            height: 237px;
-        }
-        main article.ls p { word-spacing: 1px; }
-        div.sprite2 ul.sprite12 {
-            border: 2px solid #fffffff5;
-            background-image: url(imgs/spriteweb.png);
-            background-position: -84px 385px;           
-            margin: -220px 730px;
-            width: 52px;
-            height: 155px;
-        }
-        div.sprite13 {
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            margin: 238px -954px;
-            width: 1003px;
-            height: 246px;         
-        }
-        div.sprite2 ul.sprite14 {
-            border: 2px solid #fffffff5;
-            background-image: url(imgs/spriteweb.png);
-            background-position: -290px 105px;           
-            margin: 71px 20px;
-            width: 50px;
-            height: 100px;
-        }
-        main article {
-            background-color: #ffffff;
-            border: 1px solid #ffffff;
-            display: inline-block;
-            vertical-align: top;
-            padding: 5px;
-            width: 700px;
-            height: 237px;
-        }
-        main article.ls p { word-spacing: 1px; }
-        div.sprite2 ul.sprite15 {
-                border: 2px solid #ffffff;
-                background-image: url(imgs/spriteweb.png);
-                background-position: -84px 385px;           
-                margin: -220px 730px;
-                width: 52px;
-                height: 155px;
-        }
-        div.sprite16 {
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            margin: 350px -183px;
-            width: 1047px;
-            height: 253px;
-        }
-        div.sprite17 {
-            border: 2px solid #ffffff;
-            background-image: url(imgs/spriteweb.png);           
-            background-position: -518px 184px;
-            height: 188px;
-            width: 222px;
-            margin: -606px 220px;
-        }
-        section { margin: 206px -839px ; }
-        section { padding-left: 365px; }
-        section ul { padding-left: 60px; }
-        section ul li {
-            display: inline-block;
-            vertical-align: top;
-            padding: 10px;
-        }
-        section ul li a:link,
-        section ul li a:visited {
-            background-color: rgb(249, 249, 249);
-            color: #000701;
-            padding: 20px 68px;
-            text-decoration: none;
-        }
-    </style>
+		body {
+			background-color: rgb(22, 160,84);
+			font-family: Arial;
+		}
+		section.sprite0 {
+			height: 200px;
+		}
+		div.sprite1 {
+			background: url(imgs/spriteweb.png);
+            background-position: -10px -440px;
+			height: 120px;
+			margin: 0px auto;
+			width: 180px;
+		}
+		section.sprite0 menu {
+			margin: 20px auto;
+			padding: 0;
+			width: 920px;
+		}
+		section.sprite0 menu li {
+			background-color: rgb(6, 73, 36);
+			border-bottom: 6px solid #fff;
+			color: #fff;
+			display: inline-block;
+			padding: 20px;
+			margin: 0px 10px;
+			text-align: center;
+			width: 120px;
+		}
+		section.sprite0 menu li:hover {
+			background-color: rgb(0,0,0);
+			border-bottom: 6px solid #dab708;
+			cursor: url(imgs/sprite.png), pointer;
+		}
+		section.sprite2 {
+			background-color: rgb(6, 73, 36);
+			height: 220px;
+			margin: 40px auto;
+			padding: 10px;
+			width: 880px;
+		}
+		section.sprite2 div.sprite3 {
+			border: 2px solid #fff;
+			background: url(imgs/spriteweb.png);
+			background-position: -500px -18px;
+			display: inline-block;
+			height: 190px;
+			margin: 10px;
+			width: 264px;
+		}
+		section.sprite2 div.sprite5 {
+			border: 2px solid #fff;
+			background: url(imgs/spriteweb.png);
+			background-position: -500px -18px;
+			display: inline-block;
+			height: 190px;
+			margin: 10px;
+			width: 264px;
+		}
+		section.sprite2 div.sprite7 {
+			border: 2px solid #fff;
+			background: url(imgs/spriteweb.png);
+			background-position: -500px -18px;
+			display: inline-block;
+			height: 190px;
+			margin: 10px;
+			width: 264px;
+		}
+		section.sprite2 div.sprite3 div.sprite4 {
+			background-color: rgba(255, 255, 255,0.3);
+			font-weight: bold;
+			font-size: 1.3em;
+			padding: 20px;
+			text-align: center;
+		}
+		section.sprite2 div.sprite5 div.sprite6 {
+			background-color: rgba(255,255,255,0.3);
+			font-weight: bold;
+			font-size: 1.3em;
+			padding: 20px;
+			text-align: center;
+		}
+		section.sprite2 div.sprite7 div.sprite8 {
+			background-color: rgba(255,255,255,0.3);
+			font-weight: bold;
+			font-size: 1.3em;
+			padding: 20px;
+			text-align: center;
+		}
+		section.sprite2 div.sprite3:hover div.sprite4 {
+			background-color: rgba(255,255,255,0.9);
+			cursor: url(imgs/sprite.png), pointer;
+		}
+		section.sprite2 div.sprite5:hover div.sprite6 {
+			background-color: rgba(255,255,255,0.9);
+			cursor: url(imgs/sprite.png), pointer;
+		}
+		section.sprite2 div.sprite7:hover div.sprite8 {
+			background-color: rgba(255,255,255,0.9);
+			cursor: url(imgs/sprite.png), pointer;
+		}
+		section.sprite9 {
+			background-color: rgb(6, 73, 36);
+			height: 620px;
+			margin: 40px auto;
+			padding: 10px;
+			width: 880px;
+		}
+		section.sprite9 article {
+			background-color: #fff;
+			margin: 10px auto;
+			margin-top: 0px;
+			height: 200px;
+			position: relative;
+		}
+		section.sprite9 article:hover p {
+			color: rgb(22, 160,84);
+			cursor: url(imgs/sprite.png), pointer;
+		}
+		section.sprite9 article div.sprite10 {
+			background: url(imgs/spriteweb.png);
+			background-position: -300px -500px;
+			height: 80px;
+			position: absolute;
+			top: 56px;
+			left: 50px;
+			width: 80px;
+		}
+		section.sprite9 article div.sprite11 {
+			background: url(imgs/spriteweb.png);
+			background-position: -80px -210px;
+			height: 160px;
+			position: absolute;
+			top: 16px;
+			right: 50px;
+			width: 110px;
+		}
+		section.sprite9 article div.sprite12 {
+			background: url(imgs/spriteweb.png);
+			background-position: -300px -500px;
+			height: 80px;
+			position: absolute;
+			top: 56px;
+			left: 50px;
+			width: 80px;
+		}
+		section.sprite9 article div.sprite13 {
+			background: url(imgs/spriteweb.png);
+			background-position: -80px -210px;
+			height: 160px;
+			position: absolute;
+			top: 16px;
+			right: 50px;
+			width: 110px;
+		}
+		section.sprite9 article div.sprite14 {
+			background: url(imgs/spriteweb.png);
+			background-position: -300px -500px;
+			height: 80px;
+			position: absolute;
+			top: 56px;
+			left: 50px;
+			width: 80px;
+		}
+		section.sprite9 article div.sprite15 {
+			background: url(imgs/spriteweb.png);
+			background-position: -80px -210px;
+			height: 160px;
+			position: absolute;
+			top: 16px;
+			right: 50px;
+			width: 110px;
+		}
+		section.sprite9 article p {
+			color: #777;
+			height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 180px;
+			line-height: 1.8em;
+			text-align: justify;
+			width: 510px;
+		}
+		section.sprite16 {
+			background-color: #fff;
+			height: 220px;
+			margin: 10px auto 0px auto;
+			padding: 10px;
+			position: relative;
+			width: 880px;
+		}
+		section.sprite16 div.sprite17 {
+			background: url(imgs/spriteweb.png);
+			background-position: -500px -420px;
+			height: 180px;
+			position: absolute;
+			left: 300px;
+			top: 0px;
+			width: 260px;
+		}
+		section.sprite16 menu {
+			margin: 20px auto;
+			padding: 0;
+			position: absolute;
+			bottom: -10px;
+			width: 920px;
+		}
+		section.sprite16 menu li {
+			border-bottom: 6px solid #fff;
+			color: #777;
+			display: inline-block;
+			list-style: none;
+			padding: 10px;
+			margin: 0px 10px;
+			text-align: center;
+			width: 120px;
+		}
+		section.sprite16 menu li:hover {
+			border-bottom: 6px solid rgb(22, 160,84);
+			cursor: url(imgs/sprite.png), pointer;
+		}
+	</style>
 </head>
 <body>
-    <div class="sprite1"></div>
-    <menu>
-        <ul>
-            <li><a href="">INICIO</a></li>
-            <li><a href="">NOSOTROS</a></li>
-            <li><a href="">PORTAFOLIO</a></li>
-            <li><a href="">SERVICIOS</a></li>
-            <li><a href="">CONTACTO</a></li>
-        </ul>
-        <div class="sprite2">
-            <ul class="sprite3">
-                <ul class="sprite4">
-                <ul class="sprite5">
-            </ul>
-            <div class="sprite6">
-                <div class="sprite7">
-                <ul class="sprite8">
-                </ul>                
-                <main>
-                    <article class="ls">
-                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla nostrum quasi quia. Nulla, nesciunt, vero nostrum perferendis dolorum veritatis odit molestias, est voluptatem numquam quis velit. Officia labore repellendus necessitatibus eum qui delectus blanditiis voluptate libero expedita. Tenetur, vitae cupiditate! Ex eveniet maxime modi iste libero ratione dolorem temporibus asperiores? Illo consequuntur totam sit assumenda sunt distinctio asperiores inventore iure deserunt aut sapiente minus nam culpa ratione, aperiam minima vero iste praesentium accusantium laborum maxime ex consequatur nobis cupiditate. Quae veniam quasi ut eos fuga repudiandae similique incidunt minus quis tempora? Asperiores quas veritatis repudiandae laudantium dolorum, ipsa sed corporis, voluptatem totam magnam sequi voluptas maxime aliquam esse modi amet iure minus. A temporibus mollitia, fugit tempora nihil rerum delectus.</p>
-                    </article>
-                    <ul class="sprite9">
-                        <div class="sprite10">
-                            <ul class="sprite11">
-                            </ul>                
-                            <main>
-                                <article class="ls">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla nostrum quasi quia. Nulla, nesciunt, vero nostrum perferendis dolorum veritatis odit molestias, est voluptatem numquam quis velit. Officia labore repellendus necessitatibus eum qui delectus blanditiis voluptate libero expedita. Tenetur, vitae cupiditate! Ex eveniet maxime modi iste libero ratione dolorem temporibus asperiores? Illo consequuntur totam sit assumenda sunt distinctio asperiores inventore iure deserunt aut sapiente minus nam culpa ratione, aperiam minima vero iste praesentium accusantium laborum maxime ex consequatur nobis cupiditate. Quae veniam quasi ut eos fuga repudiandae similique incidunt minus quis tempora? Asperiores quas veritatis repudiandae laudantium dolorum, ipsa sed corporis, voluptatem totam magnam sequi voluptas maxime aliquam esse modi amet iure minus. A temporibus mollitia, fugit tempora nihil rerum delectus.</p>
-                                </article>
-                                <ul class="sprite12">
-                                    <div class="sprite13">
-                                        <ul class="sprite14">
-                                        </ul>                
-                                        <main>
-                                            <article class="ls">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla nostrum quasi quia. Nulla, nesciunt, vero nostrum perferendis dolorum veritatis odit molestias, est voluptatem numquam quis velit. Officia labore repellendus necessitatibus eum qui delectus blanditiis voluptate libero expedita. Tenetur, vitae cupiditate! Ex eveniet maxime modi iste libero ratione dolorem temporibus asperiores? Illo consequuntur totam sit assumenda sunt distinctio asperiores inventore iure deserunt aut sapiente minus nam culpa ratione, aperiam minima vero iste praesentium accusantium laborum maxime ex consequatur nobis cupiditate. Quae veniam quasi ut eos fuga repudiandae similique incidunt minus quis tempora? Asperiores quas veritatis repudiandae laudantium dolorum, ipsa sed corporis, voluptatem totam magnam sequi voluptas maxime aliquam esse modi amet iure minus. A temporibus mollitia, fugit tempora nihil rerum delectus.</p>
-                                            </article>
-                                            <ul class="sprite15">                       
-                    </ul>
-                    <div class="sprite16"></div>
-                    <div class="sprite17">
-                    <section>
-                        <ul>
-                            <li><a href="">INICIO</a></li>
-                            <li><a href="">NOSOTROS</a></li>
-                            <li><a href="">PORTAFOLIO</a></li>
-                            <li><a href="">SERVICIOS</a></li>
-                            <li><a href="">CONTACTO</a></li>
-                        </ul>
-                    </div>             
-                </main>
-            </div>
-        </div>
-        </section>
+	<section class="sprite0">
+		<div class="sprite1"></div>
+		<menu>
+			<li>INICIO</li>
+			<li>NOSOTROS</li>
+			<li>PORTAFOLIO</li>
+			<li>SERVICIOS</li>
+			<li>CONTACTO</li>
+		</menu>
+	</section>
+	<section class="sprite2">
+		<div class="sprite3">
+			<div class="sprite4">Sprite 01</div>
+		</div>
+		<div class="sprite5">
+			<div class="sprite6">Sprite 02</div>
+		</div>
+		<div class="sprite7">
+			<div class="sprite8">Sprite 03</div>
+		</div>
+	</section>
+	<section class="sprite9">
+		<article>
+			<div class="sprite10"></div>
+			<p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, deserunt praesentium. Voluptatibus similique incidunt nemo iusto eos alias vel architecto voluptatem et quaerat dolorum quisquam nisi perferendis eligendi iure, temporibus saepe harum quia laudantium hic. Natus cupiditate ullam ad accusamus. Dicta voluptas earum facere iure minima quasi reiciendis eius consectetur?
+			</p>
+			<div class="sprite11"></div>
+		</article>
+		<article>
+			<div class="sprite12"></div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, deserunt praesentium. Voluptatibus similique incidunt nemo iusto eos alias vel architecto voluptatem et quaerat dolorum quisquam nisi perferendis eligendi iure, temporibus saepe harum quia laudantium hic. Natus cupiditate ullam ad accusamus. Dicta voluptas earum facere iure minima quasi reiciendis eius consectetur?
+			</p>
+			<div class="sprite13"></div>
+		</article>
+		<article>
+			<div class="sprite14"></div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, deserunt praesentium. Voluptatibus similique incidunt nemo iusto eos alias vel architecto voluptatem et quaerat dolorum quisquam nisi perferendis eligendi iure, temporibus saepe harum quia laudantium hic. Natus cupiditate ullam ad accusamus. Dicta voluptas earum facere iure minima quasi reiciendis eius consectetur?
+			</p>
+			<div class="sprite15"></div>
+		</article>
+	</section>
+	<section class="sprite16">
+		<div class="sprite17"></div>
+		<menu>
+			<li>INICIO</li>
+			<li>NOSOTROS</li>
+			<li>PORTAFOLIO</li>
+			<li>SERVICIOS</li>
+			<li>CONTACTO</li>
+		</menu>
+	</section>
 </body>
 </html>
