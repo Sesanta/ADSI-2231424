@@ -31,3 +31,9 @@ h1 span a:visited {
     float: left;
     text-decoration: none;
 }
+
+@media (max-width: 580px) {
+    main {
+        width: 345px;
+    }
+}
