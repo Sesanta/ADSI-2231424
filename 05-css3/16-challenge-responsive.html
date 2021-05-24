@@ -4,9 +4,268 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Challenge Responsive</title>
+    <style>
+        * { transition: all 0.5s ease-out; }
+        body {
+			background-color: #fff;
+			font-family: Arial;
+		}
+        main {
+            width: 1510px;
+        }
+        main section.cabeza figure.logo {
+			background: url(imgs/ucl-logo.png) no-repeat center;
+			height: 330px;
+			margin: 0px auto;
+			width: 1420px;
+		}
+        main section.cuerpo div.real {
+			background: url(imgs/real.png) no-repeat center;
+			display: inline-block;
+			height: 354px;
+			margin: 0px auto;
+            padding: 10px;
+            position: relative;
+			width: 354px;
+		}
+		main section.cuerpo div.milan {
+			background: url(imgs/milan.png) no-repeat center;
+			display: inline-block;
+			height: 354px;
+			margin: 0px auto;
+            position: relative;
+            padding: 10px;
+			width: 354px;
+		}
+		main section.cuerpo div.bayern {
+			background: url(imgs/bayern.png) no-repeat center;
+			display: inline-block;
+			height: 354px;
+			margin: 0px auto;
+            padding: 10px;
+            position: relative;
+			width: 354px;
+		}
+        main section.cuerpo div.liverpool {
+			background: url(imgs/liverpool.png) no-repeat center;
+			display: inline-block;
+			height: 354px;
+			margin: 0px auto;
+            padding: 10px;
+            position: relative;
+			width: 354px;
+        }
+        main section.cuerpo div.real div.team1 {
+			background-color: rgba(10, 0, 100, 0.9);
+            color: #fff;
+			font-weight: bold;
+			font-size: 1.3em;
+            height: 54px;
+            position: absolute;
+            top: 320px;
+			text-align: center;
+            transition: top 0.5s, height 0.5s;
+            width: 354px;
+		}
+        main section.cuerpo div.real:hover div.team1 { 
+            cursor: url(imgs/pointer.png), pointer;
+            height: 94px;
+            top: 280px;
+        }
+		main section.cuerpo div.milan div.team2 {
+            background-color: rgba(10, 0, 100, 0.9);
+            color: #fff;
+			font-weight: bold;
+			font-size: 1.3em;
+            height: 54px;
+            position: absolute;
+            top: 320px;
+			text-align: center;
+            transition: top 0.5s, height 0.5s;
+            width: 354px;
+		}
+        main section.cuerpo div.milan:hover div.team2 { 
+            cursor: url(imgs/pointer.png), pointer;
+            height: 94px;
+            top: 280px;
+        }
+		main section.cuerpo div.bayern div.team3 {
+            background-color: rgba(10, 0, 100, 0.9);
+            color: #fff;
+			font-weight: bold;
+			font-size: 1.3em;
+            height: 54px;
+            position: absolute;
+            top: 320px;
+			text-align: center;
+            transition: top 0.5s, height 0.5s;
+            width: 354px;
+		}
+        main section.cuerpo div.bayern:hover div.team3 { 
+            cursor: url(imgs/pointer.png), pointer;
+            height: 94px;
+            top: 280px;
+        }
+        main section.cuerpo div.liverpool div.team4 {
+            background-color: rgba(10, 0, 100, 0.9);
+            color: #fff;
+			font-weight: bold;
+			font-size: 1.3em;
+            height: 54px;
+            position: absolute;
+            top: 320px;
+			text-align: center;
+            transition: top 0.5s, height 0.5s;
+            width: 354px;
+		}
+        main section.cuerpo div.liverpool:hover div.team4 { 
+            cursor: url(imgs/pointer.png), pointer;
+            height: 94px;
+            top: 280px;
+        }
+        main section.pies {
+            padding: 10px;
+        }
+        main section.pies article.first {
+            margin-top: 40px;
+            border: 2px dotted #110a6b;
+        }
+        main section.pies article.first div.trofeo {
+            background: url(imgs/trofeo.png) no-repeat center;
+            display: inline-block;
+			height: 426px;
+			width: 426px;
+        }
+        main section.pies article.first div.p1 {
+            color: #777;
+            display: inline-block;
+            height: 424px;
+			line-height: 1.8em;
+			text-align: justify;
+			width: 700px;
+        }
+        main section.pies article.first div.p1 h4 {
+            color: #000;
+            font-size: 1.5em;
+            margin-top: 0px;
+        }
+        main section.pies article.last {
+            margin-top: 20px;
+            border: 2px dotted #110a6b;
+        }
+        main section.pies article.last div.balon {
+            background: url(imgs/balon.png) no-repeat center;
+            display: inline-block;
+			height: 426px;
+			width: 426px;
+        }
+        main section.pies article.last div.p2 {
+            color: #777;
+            display: inline-block;
+            height: 424px;
+			line-height: 1.8em;
+			text-align: justify;
+			width: 700px;
+        }
+        main section.pies article.last div.p2 h4 {
+            color: #000;
+            font-size: 1.5em;
+            margin-top: 0px;
+        }
+        @media (max-width: 1080px) {
+            main {
+                width: 755px;
+            }
+            main section.cabeza figure.logo {
+                background: url(imgs/ucl-logo.png) no-repeat center;
+                height: 330px;
+                width: 710px;
+            }
+            main section.cuerpo {
+                width: 755px;
+            }
+            main section.pies {
+                width: 735px;
+            }
+            main section.pies article.first div.p1 {
+                width: 300px;               
+            }
+            main section.pies article.first div.p1 p {
+                height: 350px;
+                overflow: scroll;
+            }
+            main section.pies article.last div.p2 {
+                width: 300px;
+            }
+            main section.pies article.last div.p2 p {
+                height: 350px;
+                overflow: scroll;
+            }
+        }
+        @media (max-width: 780px) {
+            main {
+                width: 377.5px;
+            }
+            main section.cabeza figure.logo {
+                background: url(imgs/ucl-logo.png) no-repeat center;
+                height: 330px;
+                width: 355px;
+            }
+            main section.cuerpo {
+                width: 377.5px;
+            }
+            main section.pies {
+                width: 430px;
+            }
+            main section.pies article.first div.p1 {
+                height: 424px;
+                width: 424px;
+            }
+            main section.pies article.last div.p2 {
+                height: 424px;
+                width: 424px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <section class="cabeza">
+            <figure class="logo"></figure>
+        </section>
+
+        <section class="cuerpo">
+            <div class="real">
+                <div class="team1">Real Madrid</div>
+            </div>
+            <div class="milan">
+                <div class="team2">A.C. Milan</div>
+            </div>
+            <div class="bayern">
+                <div class="team3">Bayern de Múnich</div>
+            </div>
+            <div class="liverpool">
+                <div class="team4">Liverpool Football Club</div>
+            </div>
+        </section>
+
+        <section class="pies">
+            <article class="first">
+                <div class="trofeo"></div>
+                <div class="p1">
+                    <h4>TROFEO</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sequi adipisci rerum eligendi molestiae quam ullam cupiditate nisi itaque placeat veritatis pariatur, perferendis error laborum dolorum fugiat quos ducimus, maxime ratione reprehenderit. Eligendi maxime dolorem facilis. Ab maiores assumenda repellat, sit facere, aperiam deserunt aut quis harum porro veritatis eaque neque temporibus perferendis in reiciendis quod corporis iure praesentium perspiciatis. Dolore, eius ipsum, ipsam cum quos labore quae consequuntur maxime nemo id impedit dolorem sint debitis officia illum velit officiis repudiandae ad non. Perspiciatis molestiae consequuntur expedita saepe est ad eveniet omnis obcaecati nulla explicabo? Sapiente quam suscipit dolorem voluptatum earum! Aliquam natus alias, nam fugit rerum reiciendis sit numquam neque praesentium commodi magni temporibus, velit animi. Officia nobis voluptates veritatis fuga nisi eveniet assumenda voluptas expedita, vel quia facere dolorum sequi consequatur praesentium, vero ex totam sit, nemo doloribus maiores nulla? Similique, tempora. Ducimus, ipsa? Odit tempora veritatis neque.</p>
+                </div>
+            </article>
+            <article class="last">
+                <div class="balon"></div>
+                <div class="p2">
+                    <h4>BALON</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sequi adipisci rerum eligendi molestiae quam ullam cupiditate nisi itaque placeat veritatis pariatur, perferendis error laborum dolorum fugiat quos ducimus, maxime ratione reprehenderit. Eligendi maxime dolorem facilis. Ab maiores assumenda repellat, sit facere, aperiam deserunt aut quis harum porro veritatis eaque neque temporibus perferendis in reiciendis quod corporis iure praesentium perspiciatis. Dolore, eius ipsum, ipsam cum quos labore quae consequuntur maxime nemo id impedit dolorem sint debitis officia illum velit officiis repudiandae ad non. Perspiciatis molestiae consequuntur expedita saepe est ad eveniet omnis obcaecati nulla explicabo? Sapiente quam suscipit dolorem voluptatum earum! Aliquam natus alias, nam fugit rerum reiciendis sit numquam neque praesentium commodi magni temporibus, velit animi. Officia nobis voluptates veritatis fuga nisi eveniet assumenda voluptas expedita, vel quia facere dolorum sequi consequatur praesentium, vero ex totam sit, nemo doloribus maiores nulla? Similique, tempora. Ducimus, ipsa? Odit tempora veritatis neque.</p>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
