@@ -22,14 +22,16 @@ main h1 {
     text-align: center;
 }
 
+main h2,
 main h3 {
     text-align: center;
 }
 
 h1 span a:link,
 h1 span a:visited {
-    float: left;
+    color: #fff;
     text-decoration: none;
+    float: left;
 }
 
 @media (max-width: 580px) {
