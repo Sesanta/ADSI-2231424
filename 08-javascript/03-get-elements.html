@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements JS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">🏠</a></span> Get Elements JS</h1>
+        </header>
+        <section>
+            <h2>Get Id</h2>
+            <strong id="year"></strong>
+            <!-- - - - - - - - - - - - - - - - -->
+            <h2>Get TagName</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quo!</p>
+            <strong id="tags"></strong>
+            <!-- - - - - - - - - - - - - - - - -->
+            <h2>Get ClassName</h2>
+            <ul>
+                <li class="element">Element 1</li>
+                <li class="element">Element 2</li>
+                <li class="element">Element 3</li>
+                <li class="element">Element 4</li>
+                <li class="element">Element 5</li>
+            </ul>
+            <!-- - - - - - - - - - - - - - - - -->
+            <h2>Query Selector/Selector All</h2>
+            <button class="btn">Button 1</button>
+            <button class="btn">Button 2</button>
+        </section>
+    </main>
+
+    <script>
+        // Get Element By Id
+        let year       = document.getElementById('year');
+        let today      = new Date();
+        year.innerText = "Current year: " + today.getFullYear();
+        // Get Elements By TagName
+        let ntags      = document.getElementsByTagName('p');
+        let tags       = document.getElementById('tags');
+        tags.innerText = "There are: " + ntags.length + " paragraphs";
+        // Get Elements By ClassName
+        let elements = document.getElementsByClassName('element');
+        elements[2].style.backgroundColor = '#f0dc68';
+        elements[2].style.fontWeight = '800';
+        elements[2].style.width = '200px';
+        // Query Selector / Selector All
+        let btn = document.querySelector('section button.btn');
+        let btns = document.querySelectorAll('section button.btn');
+        btn.style.color = "#900";
+        btns[1].style.color = "#090";
+    </script>
+    
+</body>
+</html>
