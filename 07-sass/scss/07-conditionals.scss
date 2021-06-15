@@ -59,14 +59,14 @@ div.modal {
 
 		// - - - - - - - - - - - - - - - - - - -
 		// Condicionales 
-		$age: 26;
+		$age: 34;
 		@if $age >= 18 {
 			h2.message {
 				color: #439d27;
 				border-bottom: 2px solid #439d27;
 				position: relative;
 				&:after {
-					content: "Yes, you can vote";
+					content: "Yes, You Can Vote";
 				}
 			}
 		} @else {
@@ -75,7 +75,7 @@ div.modal {
 				border-bottom: 2px solid #d71f33;
 				position: relative;
 				&:after {
-					content: "Can't vote";
+					content: "Can't Vote";
 				}
 			}
 		}

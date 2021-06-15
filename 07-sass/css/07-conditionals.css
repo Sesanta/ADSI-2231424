@@ -62,7 +62,7 @@ div.modal > div h2.message {
   position: relative;
 }
 div.modal > div h2.message:after {
-  content: "Yes, you can vote";
+  content: "Yes, You Can Vote";
 }
 div.modal > div a:link,
 div.modal > div a:visited {
