@@ -377,6 +377,7 @@
 					res = parseFloat(num1) ** parseFloat(num2);
 					break;
 				}
+                
 			clearCharacters();
             if(res > 99999999) {
                 res = res.toExponential(2);
@@ -475,6 +476,51 @@
 			operador = "^";
 			clean();
 		}
+
+        //Keyboard Events
+        document.onkeyup = function(event) {
+            console.log(event.keyCode);
+            switch (event.keyCode) {
+                case 13:   
+                    result();
+                    break;
+                case 8:   
+                    clearCharacters();
+                    break;
+                case 96:   
+                    addCharacter(0);
+                    break;
+                case 97:   
+                    addCharacter(1);
+                    break;
+                case 98:   
+                    addCharacter(2);
+                    break;
+                case 99:   
+                    addCharacter(3);
+                    break;
+                case 100:   
+                    addCharacter(4);
+                    break;
+                case 101:   
+                    addCharacter(5);
+                    break;
+                case 102:   
+                    addCharacter(6);
+                    break;
+                case 103:   
+                    addCharacter(7);
+                    break;
+                case 104:   
+                    addCharacter(8);
+                    break;
+                case 105:   
+                    addCharacter(9);
+                    break;
+                default:
+                    break;
+            }
+        }
 
     </script>
     
