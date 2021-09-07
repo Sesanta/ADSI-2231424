@@ -13,8 +13,8 @@
             font-size: 16px;
         }
         figure.conditional {
-            background-color: #B71010;
-            border: 10px solid #c47365;
+            background-color: #012e2c;
+            border: 10px solid #000;
             border-radius: 16px;
             height: 840px;
             margin: 20px auto;
@@ -84,7 +84,7 @@
         figure.conditional input[type=date] {
             border: none;
             height: 60px;
-            color: #c47365;
+            color: #000;
             font-weight: 500;
             font-size: 20px;
             font-family: Yatra One;
@@ -150,19 +150,17 @@
             background-repeat: no-repeat;
             background-position: center 100px;
             border-radius: 20px;
-            height: 200px;
+            height: 140px;
             left: 20px;
             position: absolute;
             top: 290px;
             width: 440px;
         }
         figure.conditional div.message.red {
-            background-color: #ff0404;
-            background-image: url(imgs/conditionals/i-war.svg);
+            background-color: #880606;
         }
         figure.conditional div.message.green {
-            background-color: #00ff37;
-            background-image: url(imgs/conditionals/i-peace.svg);
+            background-color: #07771f;
         }
         main section figure.conditional.interface h3 {
             background-color: transparent;
@@ -276,7 +274,7 @@
                 vfullname.innerText = fullname.value;
                 message.classList.remove('red');
                 message.classList.add('green');
-                vmessage.innerText = 'You will not go to war!';
+                vmessage.innerText = 'Enjoy it, must not serve in the military!';
             } else {
                 if (age >= 18) {
                     vgender.setAttribute('src', 'imgs/conditionals/v-boy.svg');
@@ -285,7 +283,7 @@
                     vfullname.innerText = fullname.value;
                     message.classList.remove('green');
                     message.classList.add('red');
-                    vmessage.innerText = 'You must go to war!';
+                    vmessage.innerText = 'I am sorry, must do military service!';
                 } else {
                     vgender.setAttribute('src', 'imgs/conditionals/v-boy.svg');
                     vfullname.classList.remove('pink');
@@ -293,7 +291,7 @@
                     vfullname.innerText = fullname.value;
                     message.classList.remove('red');
                     message.classList.add('green');
-                    vmessage.innerText = 'You will not go to war!';
+                    vmessage.innerText = 'Enjoy it, must not serve in the military!';
                 }
             }
         }
