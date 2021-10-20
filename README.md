@@ -11,3 +11,4 @@
 - **06** - [PUG](06-pug/)
 - **07** - [SASS](07-sass/)
 - **08** - [JavaScript](08-javascript/)
+- **09** - [jQuery](09-jquery/)
