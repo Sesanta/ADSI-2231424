@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/styles.css">
+   <title>Events</title>
+   <style>
+      body{
+         transition: all 0.2s ease-in;
+      }
+     div.box{
+        background: #000 url(imgs/free.jpg) no-repeat center;
+        background-size: 135%;
+        border: 2px solid #1e4168;
+        filter: grayscale(1);
+        height: 200px;
+        margin: 20px auto;
+        width: 200px;
+        transition: all 0.8s ease-in;
+      }
+
+      div.box.enter{
+         background-size: 100%;
+         filter: grayscale(0);
+      }
+
+      input, select{
+         border: 2px solid #1e4168;
+         border-radius: 4px;
+         display: block;
+         margin: 20px auto;
+         padding: 10px;
+         width: 280px;
+      }
+
+      output, p.msj, p.msjScroll{
+         color: #1e4168;
+         display: block;
+         font-size: 1.4rem;
+         text-align: center;
+         text-transform: uppercase;
+      }
+
+      div.ball{
+         border-radius: 100px;
+         background-color: #1e4168;
+         height: 200px;
+         margin: 20px auto;
+         width: 200px;
+      }
+      
+
+   </style>
+</head>
+<body>
+   <main>
+      <header>
+         <h1> <span> <a href="index.html">🏠</a> </span> Events</h1>
+      </header>
+      <section>
+         <h2>Mouse Events</h2>
+         <div class="box"></div>
+         <h2>Keyboard Events</h2>
+         <input type="text" placeholder="enter text">
+         <output></output>
+         
+         <h2>Form Events</h2>
+         <select>
+            <option value="">Select font size...</option>
+            <option value="1">1.5rem</option>
+            <option value="2">2.5rem</option>
+            <option value="3">3.3rem</option>
+         </select>
+         <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium laudantium nobis, quos voluptas quis consequuntur! Facere reprehenderit iure neque unde cupiditate est quas illo, illum quisquam odio saepe consequatur deleniti atque, quos tempore aliquam voluptatibus placeat fugit, debitis totam vero molestiae. Dolorum beatae quasi laboriosam maxime commodi vitae cumque.
+         </p>
+         <h2>Window Events</h2>
+         <p class="msj"></p>
+         <p class="msjScroll"></p>
+         <div class="ball"></div>
+      </section>
+   </main>
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script>
+      /* jqDocReady */
+      $(document).ready(function () {
+         //Mouse Events
+         $("div.box").mouseenter(function(e){
+            $(this).addClass("enter");
+         });
+         $("div.box").mouseleave(function(e){
+            $(this).removeClass("enter");
+         });
+         //Keyboard Events
+         $('input').keyup(function (e){ 
+            $('output').text($(this).val());
+         });
+         //Form Events
+         //$('select').change(() => {});
+         $('select').change(function(e){
+            event.preventDefault();
+            switch($(this).val()){
+               case '1':
+                  $('body').css('font-size', '1.5rem');   
+                  break;
+               case '2':
+                  $('body').css('font-size', '2.5rem');   
+                  break;
+               case '3':
+                  $('body').css('font-size', '3.5rem');   
+                  break;
+               default:
+                  $('body').css('font-size', '1rem');   
+                  break;
+            }
+         });
+         //Windows Events
+         $(window).resize(function(e){
+            $ww = $(this).outerWidth();
+            $('p.msj').text('Width Window: ' + $ww + 'px.');
+         });
+         $sizeball=0;
+         $lastScrollTop=0;
+         $(window).scroll(function(e){
+            $dirscroll = $(this).scrollTop();
+            $('p.msjScroll').text('Scroll Value: ' + $lastScrollTop);
+            if ($dirscroll < $lastScrollTop){
+               console.log("up");
+               if ($sizeball >0.5){
+                  $sizeball-=0.05;
+                  $('div.ball').css('transform', 'scale('+ $sizeball+')');
+               }
+            } else if($dirscroll==$lastScrollTop){
+               //Do nothing
+            } else{
+               console.log("down");
+               if ($sizeball < 1.2){
+                  $sizeball+=0.05;
+                  $('div.ball').css('transform', 'scale('+ $sizeball+')');
+               }
+            }
+            $lastScrollTop =  $dirscroll;
+         });
+      });
+
+   </script>
+</body>
+</html>
