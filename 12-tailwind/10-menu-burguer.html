@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Menu-Burguer</title>
+		<link rel="stylesheet" href="css/custom.css">
+        <script src="js/tailwind-3.0.23.js"></script>
+	</head>
+	<body class="bg-gradient-to-r from-green-600 to-green-300 min-h-screen">
+		<!-- Barra de Navegación -->
+		<nav class="bg-green-800 shadow-lg">
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="flex justify-between">
+					<div class="flex space-x-7">
+						<div>
+							<!-- Logo -->
+							<a href="#" class="flex items-center py-4 px-2">
+								<img src="imgs/logo.png" alt="Logo" class="h-8 w-8 mr-2">
+								<span class="font-semibold text-yellow-50 text-lg">Starbucks</span>
+							</a>
+						</div>
+						<!-- Barra Incial -->
+						<div class="hidden md:flex items-center space-x-1">
+							<a href="" class="py-4 px-2 text-lime-300 font-semibold hover:text-green-500 transition duration-300">Home</a>
+							<a href="" class="py-4 px-2 text-lime-300 font-semibold hover:text-green-500 transition duration-300">Services</a>
+							<a href="" class="py-4 px-2 text-lime-300 font-semibold hover:text-green-500 transition duration-300">About</a>
+							<a href="" class="py-4 px-2 text-lime-300 font-semibold hover:text-green-500 transition duration-300">Contact</a>
+						</div>
+					</div>
+					<!-- Botón -->
+					<div class="md:hidden flex items-center">
+						<button class="outline-none mobile-menu-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-300 hover:text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path class="button-switch1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                <path class="hidden button-switch2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+					    </button>
+					</div>
+				</div>
+			</div>
+			<!-- Menú en Móvil -->
+			<div class="hidden mobile-menu">
+				<ul class="">
+					<li><a href="index.html" class="block text-sm text-lime-300 px-2 py-4 hover:bg-green-500 transition duration-300">Home</a></li>
+					<li><a href="#services" class="block text-sm text-lime-300 px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+					<li><a href="#about" class="block text-sm text-lime-300 px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+					<li><a href="#contact" class="block text-sm text-lime-300 px-2 py-4 hover:bg-green-500 transition duration-300">Contact</a></li>
+				</ul>
+			</div>
+			<script>
+				const btn = document.querySelector("button.mobile-menu-button");
+				const menu = document.querySelector(".mobile-menu");
+                const btnSwitch1 = document.querySelector("path.button-switch1");
+				const btnSwitch2 = document.querySelector("path.button-switch2");
+
+				btn.addEventListener("click", () => {
+					menu.classList.toggle("hidden");
+                    btnSwitch1.classList.toggle("hidden");
+					btnSwitch2.classList.toggle("hidden");
+				});
+			</script>
+		</nav>
+	</body>
+</html>

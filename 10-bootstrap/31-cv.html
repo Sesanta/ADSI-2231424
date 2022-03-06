@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/lineicons.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+        nav.navbar ul.navbar-nav li.nav-item a:link,
+        nav.navbar ul.navbar-nav li.nav-item a:visited,
+        .navbar-brand {
+            border-bottom: 2px solid transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        nav.navbar ul.navbar-nav li.nav-item a:hover {
+            border-bottom: 2px solid #00a78e;
+        }
+        nav.navbar.scrolled ul.navbar-nav li.nav-item a:link,
+        nav.navbar.scrolled ul.navbar-nav li.nav-item a:visited {
+            color: #293651;
+        }
+        nav.navbar.scrolled ul.navbar-nav li.nav-item a:hover {
+            border-bottom: 2px solid #00a78e;
+        }
+        nav.navbar .navbar-toggler {
+            border: 1px solid transparent;
+        } 
+        nav.navbar .navbar-toggler span.navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2841, 54, 81, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .btn-brand {
+            background-color: #00a78e;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 14px 36px;
+            transition: opacity 0.2s ease-in;
+        }
+        .btn-brand:hover {
+            opacity: 0.7;
+        }
+        .header-hero h2 {
+            color: #293651;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .header-hero span {
+            color: #293651;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        .header-hero p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #646f87;
+            margin: 0px;
+        }
+        .header-hero h5 {
+            color: #00a78e;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+        .header-hero {
+            background-position: bottom center;
+            background-color: #f9f9f9;
+            overflow: hidden;
+            padding-top: 70px;
+            position: relative;
+            z-index: 5;
+        }
+        .header-hero-img {
+            margin-top: 50px;
+        }
+        .header-hero-img img {
+            width: calc(70vh - 100px);
+        }
+        .header-hero-bg {
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            z-index: -1;
+        }
+        .header-hero-bg::before {
+            background-color: #00a78e;
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 100%;
+            top: 0;
+            transform: skewX(20deg);
+            width: 1000%;
+        }
+        section.content-about {
+            padding-top: 20px;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-image img {
+            width: calc(84vh - 100px);
+        }
+        .about-content h5 {
+            color: #00a78e;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .about-content h3 {
+            color: #293651;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+        }
+        .about-content p {
+            color: #646f87;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0px;
+        }
+        .about-content h6 {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: "Montserrat", sans-serif;
+            color: #293651;
+            margin: 0px;
+        }
+        .about-content .bg-cv {
+            background-color: #00a78e;
+        }
+        section#services {
+            background-color: #f9f9f9;
+            padding-top: 100px;
+        }
+
+        section.content-services h5 {
+            color: #00a78e;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        section.content-services h3 {
+            color: #293651;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+
+        section.content-services h4 {
+            color: #293651;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            margin: 14px 0;
+        }
+
+        section.content-services i {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 46px;
+            background-color: #00A78E;
+            color: #fff;
+            border-radius: 25px;
+            border-bottom-right-radius: 0;
+        }
+
+        section.content-services div.service {
+            transition: all 0.2s ease-in;
+        }
+
+        section.content-services div.service:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: #00a78e !important;
+        }
+
+        section.content-services div.service:hover h4 {
+            color: #fff;
+        }
+
+        section.content-services div.service:hover i {
+            color: #00A78E;
+            background-color: #fff !important;
+        }
+        section.content-portfolio {
+            padding: 80px 0 120px 0;
+        }
+        section.content-portfolio h5 {
+            color: #00a78e;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        section.content-portfolio h3 {
+            color: #293651;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+        footer#footer {
+            background-color: #f9f9f9;
+            color: #293651;
+            padding: 100px 0;
+        }
+        footer a:link,
+        footer a:visited {
+            color: #293651;
+        }
+        footer ul.footer-social {
+            margin: 45px 0 20px 0;
+            list-style: none;
+            padding: 0;
+        }
+        footer ul.footer-social li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        footer ul.footer-social li a:link,
+        footer ul.footer-social li a:visited {
+            background-color: #293651;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 18px;
+            color: #fff;
+        }
+        footer ul.footer-social li a:hover {
+            background-color: #00a78e;
+            transition: all 0.2s ease-in;
+        }
+        footer ul.footer-social li a i {
+            font-size: 1rem;
+        }
+        footer span.email {
+            color: #293651;
+            font-size: 44px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        footer ul.footer-menu {
+            list-style-type: none;
+            padding-top: 20px;
+        }
+        footer ul.footer-menu li {
+            display: inline-block;
+            margin: 10px 20px 0;
+        }
+        footer ul.footer-menu li a:link,
+        footer ul.footer-menu li a:visited {
+            border-bottom: 2px solid #f9f9f9;
+            font-weight: 600;
+            padding-bottom: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease-in;
+        }
+        footer ul.footer-menu li a:hover {
+            border-bottom: 2px solid #00a78e;
+        }
+    </style>
+</head>
+<body>
+    <section class="header-navbar" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light pb-3">
+                        <div class="container">
+                            <a class="navbar-brand" href="#">
+                                <img src="imgs/logo.svg" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto gap-4 mt-2 mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link page-scroll" href="#services">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link page-scroll" href="#portfolio">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="header-hero">
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-between">
+                <div class="col-lg-6">
+                    <div class="mt-4">
+                        <h5>Hello I'm</h5>
+                        <h2>Sebastián Sánchez</h2>
+                        <span>
+                            Professional Freelance Web Designer
+                        </span>
+                        <p class="mt-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus sunt, vitae earum repudiandae id saepe, est sapiente aperiam quod culpa facere, in dolor amet dolorum molestiae ut quasi minima?
+                        </p>
+                        <a class="btn btn-brand btn-lg text-light mt-5" href="" style="background-color: #00A78E;">Hire Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-7">
+                    <div class="header-hero-img mt-5">
+                        <img src="imgs/hero.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-about">
+        <div class="container my-5" id="about">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="about-image mt-5">
+                        <img src="imgs/about_hero.png">
+                    </div>            
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content mt-5">
+                        <h5>About</h5>
+                        <h3>Why You Hire Me?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.
+                        </p>
+                        <div class="about-skills my-5">
+                            <h6 class="my-3">UI/UX Design</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-cv" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                            <h6 class="my-3">Web Design</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-cv" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                            <h6 class="my-3">HTML/CSS</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-cv" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                            <h6 class="my-3">Sketch</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-cv" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-services" id="services">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <h5>Services</h5>
+                        <h3>Service I Provide</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-vector"></i>
+                        </div>
+                        <h4>Graphic Design</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-layout"></i>
+                        </div>
+                        <h4>Web Design</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-ux"></i>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-code"></i>
+                        </div>
+                        <h4>Frontend Development</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-briefcase"></i>
+                        </div>
+                        <h4>Business Analysis</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="service bg-white shadow p-4 rounded-3">
+                        <div class="service-icon">
+                            <i class="lni lni-bullhorn"></i>
+                        </div>
+                        <h4>Digital Marketing</h4>
+                        <p>
+                            Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-portfolio" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Portfolio</h5>
+                    <h3>Latest Projects</h3>
+                </div>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="imgs/project-1.jpg" class="align-items-center w-50">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/project-2.jpg" class="align-items-center w-50">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgs/project-3.jpg" class="align-items-center w-50">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+        </div>
+    </section>
+        
+    <footer id="footer">
+        <div class="container">
+            <div class="rom">
+                <div class="col-lg-12 text-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="imgs/logo.svg" alt="Logo">
+                    </a>
+                    <ul class="footer-social">
+                        <li><a href="#"><i class="lni lni-facebook"></i></a></li>
+                        <li><a href="#"><i class="lni lni-twitter"></i></a></li>
+                        <li><a href="#"><i class="lni lni-instagram"></i></a></li>
+                        <li><a href="#"><i class="lni lni-linkedin"></i></a></li>
+                    </ul>
+                    <span class="email">someone@example.com</span>
+                    <ul class="footer-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about:">About</a></li>
+                        <li><a href="#services:">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                    <p class="credit pt-5">Template Designed and Developed by <span style="color: #00A78E;">Sebas</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
