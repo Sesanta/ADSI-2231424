@@ -13,3 +13,5 @@
 - **08** - [JavaScript](08-javascript/)
 - **09** - [jQuery](09-jquery/)
 - **10** - [Bootstrap](10-bootstrap/)
+- **11** - [Tailwind](11-tailwind/)
+- **12** - [VueJS](12-vuejs/)
